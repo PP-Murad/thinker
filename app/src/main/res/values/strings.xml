@@ -1,0 +1,111 @@
+<resources>
+    <string name="app_name">随想</string>
+    <string name="app_title">随想</string>
+    <string name="app_title_blank">1</string>
+    <string name="app_welcome">欢迎回来！</string>
+    <string name="app_welcome_words">欢迎来到随想！</string>
+    <string name="app_startsearch_words">请输入搜索内容</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+    <string name="menu_account">账户</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_settings">设置</string>
+    <string name="menu_share">分享</string>
+    <string name="menu_send">发送</string>
+    <string name="menu_help">帮助</string>
+    <string name="menu_recycle">回收站</string>
+
+    <string name="title_add">添加</string>
+    <string name="title_calender">日历</string>
+    <string name="title_today">今日</string>
+    <string name="title_search">搜索</string>
+
+    <!--偏好设置-->
+    <!--响铃-->
+    <string name="pref_title_ringtone">提醒音乐</string>
+    <string name="pref_ringtone_silent">静默</string>
+    <!--存储-->
+    <string name="default_gallery_storage">默认存储</string>
+    <string name="title_auto_upload">自动上传</string>
+    <string name="summary_upload_over_wifi">移动网络或局域网连接时自动上传</string>
+    <!--通知-->
+    <string name="pref_title_notifications">通知</string>
+    <string name="summary_choose_ringtone">选择通知音乐</string>
+    <!--关于-->
+    <string name="pref_header_about">关于</string>
+    <string name="summary_about">Hi! there! glad to meet you again.</string>
+    <string name="app_version">1.5</string>
+    <string name="summary_support">反馈任何问题</string>
+    <!--反馈-->
+    <string name="title_send_feedback">发送回执</string>
+    <string name="title_faq">FAQ</string>
+    <string name="summary_faq">查看常见问题</string>
+    <string name="url_faq">https://www.androidhive.info/privacy-policy/</string>
+    <string name="privacy_policy">隐私</string>
+    <string name="url_privacy">#</string>
+    <string name="title_terms">条款</string>
+    <string name="url_terms">#</string>
+    <string name="title_version">版本</string>
+    <string name="choose_email_client">Choose email client</string>
+    <string name="title_gallery_storage">默认存储</string>
+    <string name="title_new_notification_sound">消息推送</string>
+    <string name="title_vibrate">震动</string>
+    <string name="summary_vibrate">新消息震动提醒</string>
+    <string name="key_upload_over_wifi">key_upload_over_wifi</string>
+    <string name="key_gallery_name">key_gallery_name</string>
+    <string name="key_upload_quality">key_upload_quality</string>
+    <string name="notifications_new_message">notifications_new_message</string>
+    <string name="key_notifications_new_message_ringtone">key_notifications_new_message_ringtone</string>
+    <string name="key_vibrate">key_vibrate</string>
+    <string name="key_send_feedback">key_send_feedback</string>
+
+    <!--时间选择组件专用字符串池-->
+    <string name="cancel">取消</string>
+    <string name="title">请选择时间</string>
+    <string name="confirm">确定</string>
+    <string name="year">年</string>
+    <string name="month">月</string>
+    <string name="day">日</string>
+    <string name="hour">时</string>
+    <string name="minute">分</string>
+
+    <string name="select_date">选择日期</string>
+    <string name="current_date">当前日期</string>
+    <string name="select_time">选择时间</string>
+    <string name="current_time">当前时间</string>
+    <!--时间选择组件专用字符串池-->
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">不合规用户名</string>
+    <string name="invalid_password">密码必须大于5个字符</string>
+    <string name="login_failed">"登录失败"</string>
+    <string name="hint_email">邮箱</string>
+    <string name="hint_password">密码</string>
+    <string name="hint_new_password">新密码</string>
+    <string name="hint_name">名称</string>
+    <string name="hint_code">邮箱验证码</string>
+    <string name="btn_login">登录</string>
+    <string name="btn_register">注册</string>
+    <string name="btn_find_back">找回</string>
+    <string name="btn_link_to_register">注册</string>
+    <string name="btn_link_to_findback">忘记密码？立即找回</string>
+    <string name="btn_link_to_login">已经注册？点我登录</string>
+    <string name="btn_back_to_login">返回登录</string>
+    <string name="btn_logout">退出登录</string>
+    <string name="name">Fullname</string>
+</resources>

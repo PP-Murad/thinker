@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/navigation_calender"
+            android:icon="@drawable/ic_date_range_black_48dp"
+            android:title="@string/title_calender" />
+
+        <item
+            android:id="@+id/navigation_today"
+            android:icon="@drawable/ic_track_changes_black_48dp"
+            android:title="@string/title_today" />
+        <item
+            android:id="@+id/navigation_add"
+            android:icon="@drawable/ic_playlist_add_black_48dp"
+            android:title="@string/title_add" />
+    </group>
+</menu>

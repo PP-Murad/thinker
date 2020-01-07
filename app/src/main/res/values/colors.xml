@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#03A9F4</color>
+    <color name="colorPrimaryDark">#00BCD4</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="black">#000000</color>//给content里的日历布局
+    <color name="orangeRed">#f9fc807a</color>//给content里的日历布局
+
+    <!--时间选择组件专用颜色池-->
+    <color name="date_picker_bg">#FFFFFF</color>
+    <color name="date_picker_divider">#11112233</color>
+    <color name="date_picker_text_light">#59B29C</color>
+    <color name="date_picker_text_dark">#333333</color>
+
+    <color name="main_bg">#F0F0F0</color>
+    <color name="select_title_text">#B0B0B0</color>
+    <color name="current_time_bg">#FFFFFF</color>
+    <color name="current_time_text">#666666</color>
+    <color name="selected_time_text">#57C5E8</color>
+    <!--时间选择组件专用颜色池-->
+
+    <color name="red">#fabebc</color>
+    <color name="green_blue">#c6e6e9</color>
+    <color name="gray">#969696</color>
+    <color name="lightBlack">#505f66</color>
+    <color name="white">#FFFFFF</color>
+    <color name="title_today">#3F51B5</color>
+    <color name="calender_dot">#EC0911</color>
+
+    <color name="bg_login">#26ae90</color>
+    <color name="bg_register">#2e3237</color>
+    <color name="bg_main">#428bca</color>
+
+    <color name="input_login">#222222</color>
+    <color name="input_login_hint">#999999</color>
+    <color name="input_register">#888888</color>
+    <color name="input_register_bg">#3b4148</color>
+    <color name="input_register_hint">#5e6266</color>
+    <color name="btn_login">#26ae90</color>
+    <color name="btn_login_bg">#eceef1</color>
+    <color name="lbl_name">#333333</color>
+    <color name="btn_logut_bg">#ff6861</color>
+</resources>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.notebook_test">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <application
+        android:name="org.litepal.LitePalApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_event_note_black_48dp"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_event_note_black_48dp"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Activity.ScheduleRepetitionChoose" />
+        <activity android:name=".Activity.ScheduleTypeChoose" />
+        <activity android:name=".Activity.AddScheduleActivity" />
+        <activity android:name=".Test.DBTestActivity" />
+        <activity android:name=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activity.LoginActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Activity.RegisterActivity"/>
+        <activity android:name=".Activity.findpasswordback"/>
+        <activity android:name=".SettingsActivity" />
+        <activity android:name=".SearchActivity"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".ItemClick"
+            android:parentActivityName=".MainActivity"/>
+    </application>
+
+</manifest>
