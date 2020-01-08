@@ -1,6 +1,7 @@
 package com.example.notebook_test.Activity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -18,6 +19,8 @@ import com.example.notebook_test.datepicker.CustomDatePicker;
 import com.example.notebook_test.datepicker.DateFormatUtils;
 import com.example.notebook_test.datepicker.CustomDatePicker;
 
+import org.json.JSONException;
+import org.json.JSONObject;
 import org.litepal.LitePal;
 import org.w3c.dom.Text;
 
@@ -43,6 +46,7 @@ public class AddScheduleActivity extends AppCompatActivity implements View.OnCli
     private boolean allDay = false;
     private int repetition;
     private int type;
+    private String timeStamp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -123,14 +127,33 @@ public class AddScheduleActivity extends AppCompatActivity implements View.OnCli
                 repetition = getRepetitionState();
                 type = getTypeState();
                 Schedule schedule = new Schedule(title, content, createTime, startTime, finishTime, allDay, repetition, type, false);
+
+                Date currentTime = new Date();
+                SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmss");
+                timeStamp = formatter.format(currentTime);
+                Log.d("pppppppppppppppppp", "onClick:111111111111111111111111111 " + timeStamp);
+
+                schedule.setTimeStamp(timeStamp);
+
                 schedule.save();
+
+                //获取json 取出账户邮箱信息
+                SharedPreferences sp = getSharedPreferences("loginInfo", MODE_PRIVATE);
+                String strJson = sp.getString("account", "0");
+                JSONObject response = null;
+                try {
+                    response = new JSONObject(strJson);
+                    String email = response.getString("email");
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
 
                 Toast toast = Toast.makeText(AddScheduleActivity.this, "添加成功", Toast.LENGTH_SHORT);
                 toast.show();
 
                 ((TextView) findViewById(R.id.schedule_title_EditView)).setText("");
                 ((TextView) findViewById(R.id.schedule_content_editview)).setText("");
-
         }
     }
 

@@ -33,7 +33,7 @@ public class RegisterActivity extends Activity {
     private ProgressDialog pDialog;
     private SessionManager session;
     private SQLiteHandler db;
-    private String ip = "ruitsai.top";
+    private String ip = "ruitsai.tech";
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -115,7 +115,7 @@ public class RegisterActivity extends Activity {
                         .add("name", name)
                         .build();
                 Request request = new Request.Builder()
-                        .url("http://" + ip + "/android_register_api/")
+                        .url("https://" + ip + "/register_api/")
                         .post(requestBody)
                         .build();
                 try {

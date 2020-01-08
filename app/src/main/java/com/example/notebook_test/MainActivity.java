@@ -91,6 +91,7 @@ public class MainActivity extends AppCompatActivity
                 JSONObject response = new JSONObject(strJson);
                 name = response.getString("name");
                 email = response.getString("email");
+
                 // Displaying the user details on the screen
                 // 侧边栏的头部栏
                 //NavigationView是一个RecyclerView（在23.1.0版本之前是ListView），header布局通常是0号元素。
@@ -240,8 +241,6 @@ public class MainActivity extends AppCompatActivity
         navView.setSelectedItemId(navView.getMenu().getItem(1).getItemId());
         navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
     }
-
-
 
 
     //隐藏所有Fragment

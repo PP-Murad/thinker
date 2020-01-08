@@ -26,6 +26,8 @@ public class Schedule extends LitePalSupport implements Serializable {
 
     private boolean delete;      //是否删除 false:未删除 true:已删除
 
+    private String timeStamp;   //时间戳
+
     public void setId(int id) {
         this.id = id;
     }
@@ -64,6 +66,10 @@ public class Schedule extends LitePalSupport implements Serializable {
 
     public void setDelete(boolean delete) {
         this.delete = delete;
+    }
+
+    public void setTimeStamp(String timeStamp) {
+        this.timeStamp = timeStamp;
     }
 
     public int getId() {
@@ -106,6 +112,10 @@ public class Schedule extends LitePalSupport implements Serializable {
         return delete;
     }
 
+    public String getTimeStamp() {
+        return timeStamp;
+    }
+
     public Schedule(String title, String content, long createTime, long startTime, long finishTime, boolean allDay, int repetition, int type, boolean delete) {
         this.title = title;
         this.content = content;
@@ -117,5 +127,7 @@ public class Schedule extends LitePalSupport implements Serializable {
         this.type = type;
         this.delete = delete;
     }
-    public  Schedule(){}
+
+    public Schedule() {
+    }
 }

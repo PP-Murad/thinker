@@ -1,6 +1,7 @@
 package com.example.notebook_test.Activity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -21,6 +22,7 @@ public class ScheduleTypeChoose extends AppCompatActivity implements View.OnClic
         findViewById(R.id.type_shenghuo).setOnClickListener(this);
         findViewById(R.id.type_yundong).setOnClickListener(this);
         findViewById(R.id.type_chuxing).setOnClickListener(this);
+
 
     }
 

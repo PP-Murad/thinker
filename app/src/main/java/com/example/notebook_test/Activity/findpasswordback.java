@@ -40,7 +40,7 @@ public class findpasswordback extends Activity {
     private ProgressDialog pDialog;
     private SessionManager session;
     private SQLiteHandler db;
-    private String ip = "ruitsai.top";
+    private String ip = "ruitsai.tech";
     private String codetext;
 
     @Override
@@ -97,7 +97,7 @@ public class findpasswordback extends Activity {
                                 .add("email", email)
                                 .build();
                         Request request = new Request.Builder()
-                                .url("http://" + ip + "/android_get_password_back/")
+                                .url("https://" + ip + "/password_find_back_api/")
                                 .post(requestBody)
                                 .build();
                         try {
@@ -166,7 +166,7 @@ public class findpasswordback extends Activity {
                                     .add("newpassword", newpassword)
                                     .build();
                             Request request = new Request.Builder()
-                                    .url("http://" + ip + "/android_get_password_back_db_operation/")
+                                    .url("https://" + ip + "/password_change_api/")
                                     .post(requestBody)
                                     .build();
                             try {

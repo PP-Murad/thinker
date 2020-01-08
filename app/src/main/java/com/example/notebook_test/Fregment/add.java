@@ -2,9 +2,12 @@ package com.example.notebook_test.Fregment;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,16 +20,22 @@ import android.widget.Toast;
 
 import com.example.notebook_test.Activity.ScheduleRepetitionChoose;
 import com.example.notebook_test.Activity.ScheduleTypeChoose;
+import com.example.notebook_test.AppCompatPreferenceActivity;
 import com.example.notebook_test.Model.Schedule;
 import com.example.notebook_test.R;
 import com.example.notebook_test.datepicker.CustomDatePicker;
 import com.example.notebook_test.datepicker.DateFormatUtils;
 
+import org.json.JSONException;
+import org.json.JSONObject;
 import org.litepal.LitePal;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 
 import static android.app.Activity.RESULT_OK;
+import static android.content.Context.MODE_PRIVATE;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -36,7 +45,7 @@ import static android.app.Activity.RESULT_OK;
  * Use the {@link add#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class add extends Fragment implements View.OnClickListener{
+public class add extends Fragment implements View.OnClickListener {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -54,6 +63,7 @@ public class add extends Fragment implements View.OnClickListener{
     private boolean allDay = false;
     private int repetition;
     private int type;
+    private String timeStamp;
 
     private View view;
 
@@ -98,7 +108,7 @@ public class add extends Fragment implements View.OnClickListener{
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        view=inflater.inflate(R.layout.fragment_add, container, false);
+        view = inflater.inflate(R.layout.fragment_add, container, false);
 
         LitePal.getDatabase();      //初始化数据库
 
@@ -200,7 +210,16 @@ public class add extends Fragment implements View.OnClickListener{
                 repetition = getRepetitionState();
                 type = getTypeState();
                 Schedule schedule = new Schedule(title, content, createTime, startTime, finishTime, allDay, repetition, type, false);
+//                schedule.save();
+
+                Date currentTime = new Date();
+                SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmss");
+                timeStamp = formatter.format(currentTime);
+                schedule.setTimeStamp(timeStamp);
+
                 schedule.save();
+
+                String email=new getEmail().get();  //获取email地址
 
                 //解决fragment中toast的显示问题
                 Toast toast = Toast.makeText(getActivity(), "添加成功", Toast.LENGTH_SHORT);
@@ -341,7 +360,7 @@ public class add extends Fragment implements View.OnClickListener{
     }
 
     @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data){
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
         switch (requestCode) {
             case 1:
                 if (resultCode == RESULT_OK) {
@@ -362,5 +381,23 @@ public class add extends Fragment implements View.OnClickListener{
                 }
                 break;
         }
+    }
+}
+
+class getEmail extends AppCompatActivity {
+    public String get() {
+        SharedPreferences sp = getSharedPreferences("loginInfo", MODE_PRIVATE);
+        String strJson = sp.getString("account", "0");
+        String email = null;
+        if (strJson != null) {
+            JSONObject response = null;
+            try {
+                response = new JSONObject(strJson);
+                email = response.getString("email");
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+        return email;
     }
 }
