@@ -16,6 +16,7 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 
+import com.example.notebook_test.Model.Schedule;
 import com.example.notebook_test.R;
 import com.example.notebook_test.Activity.LoginActivity;
 import com.example.notebook_test.Activity.SessionManager;
@@ -44,6 +45,7 @@ import com.example.notebook_test.Test.DBTestActivity;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.litepal.LitePal;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, add.OnFragmentInteractionListener, today.OnFragmentInteractionListener, calender.OnFragmentInteractionListener {
@@ -61,6 +63,8 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        LitePal.getDatabase();  //初始化数据库
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -158,7 +162,8 @@ public class MainActivity extends AppCompatActivity
             return true;
         } else if (id == R.id.nav_help) {
 
-        } else if (id == R.id.nav_logout) {
+        } else if (id == R.id.nav_logout) {     //注销账户，删除session，删除数据
+            LitePal.deleteAll(Schedule.class);
             logoutUser();
         } else if (id == R.id.nav_share) {
 
