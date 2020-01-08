@@ -1,4 +1,7 @@
 # notebook_test
 a notebook app
 ### 主要界面
-![Image text](https://https://github.com/PP-Murad/thinker/blob/master/app/Screenshot_1578473150.png)
+<img src="https://raw.githubusercontent.com/PP-Murad/thinker/master/app/Screenshot_1578473159.png" width = 30% height = 30% />
+<img src="https://raw.githubusercontent.com/PP-Murad/thinker/master/app/Screenshot_1578473150.png" width = 30% height = 30% />
+<img src="https://raw.githubusercontent.com/PP-Murad/thinker/master/app/Screenshot_1578473161.png" width = 30% height = 30% />
+
