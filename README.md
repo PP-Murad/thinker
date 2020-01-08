@@ -1,7 +1,7 @@
 # notebook_test
 a notebook app
 ### 主要界面
-<img src="https://github.com/notebook-android/notebook_test/blob/master/app/screenshot1.jpg" alt="Sample"  width="450" height="800">
-<img src="https://github.com/notebook-android/notebook_test/blob/master/app/screenshot2.jpg" alt="Sample"  width="450" height="800">
-<img src="https://github.com/notebook-android/notebook_test/blob/master/app/screenshot_for_today.jpg" alt="Sample"  width="450" height="800">
-<img src="https://github.com/notebook-android/notebook_test/blob/master/app/screenshot_for_calender.jpg" alt="Sample"  width="450" height="800">
+<img src="https://raw.githubusercontent.com/PP-Murad/thinker/master/app/Screenshot_1578473159.png" width = 30% height = 30% />
+<img src="https://raw.githubusercontent.com/PP-Murad/thinker/master/app/Screenshot_1578473150.png" width = 30% height = 30% />
+<img src="https://raw.githubusercontent.com/PP-Murad/thinker/master/app/Screenshot_1578473161.png" width = 30% height = 30% />
+
